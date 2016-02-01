@@ -8,11 +8,13 @@ GPIO.setup(PIN_NO, GPIO.OUT)
 
 try:
 	for i in range(5):
+
 		print 'times %s' % (i + 1)
 		GPIO.output(PIN_NO,GPIO.HIGH)
-		time.sleep(2)
+		time.sleep(1)
 		GPIO.output(PIN_NO,GPIO.LOW)
-		time.sleep(2)
-		GPIO.cleanup()
+		time.sleep(1)
 except KeyboardInterrupt:
+	pass
+finally:
 	GPIO.cleanup()
